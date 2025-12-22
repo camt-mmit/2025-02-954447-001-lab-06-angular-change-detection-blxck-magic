@@ -1,0 +1,19 @@
+<p>trial-one works!</p>
+
+@for (item of items; track $index) {
+  <div>
+    <label>
+      <b>{{ $index + 1 }} </b>
+      <input
+        type="number"
+        [value]="item"
+        #elem
+        [value]="item"
+        (change)="onChange($index, elem.valueAsNumber)"
+      />
+    </label>
+  </div>
+}
+
+<output>{{ items.join(', ') }}</output>
+<!-- ห้าทเรียก ฟังก์ใน เทมเพลต ยกเว้นใน  signal -->

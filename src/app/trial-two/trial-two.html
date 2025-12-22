@@ -1,0 +1,23 @@
+<p>trial-two works!</p>
+<div>
+  <button type="button" (click)="add()">Add</button>
+</div>
+@for (item of items; track $index) {
+  <div>
+    <label>
+      <b>{{ $index + 1 }} </b>
+      <input
+        type="number"
+        [value]="item"
+        #elem
+        [value]="item"
+        (change)="onChange($index, elem.valueAsNumber)"
+      />
+      <button type="button" (click)="changeColor(elem)">Change Color</button>
+      <button type="button" (click)="remove($index)">X</button>
+    </label>
+  </div>
+}
+
+<output>{{ items.join(', ') }}</output>
+<!-- ห้าทเรียก ฟังก์ใน เทมเพลต ยกเว้นใน  signal -->

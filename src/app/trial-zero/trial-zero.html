@@ -1,0 +1,10 @@
+<button type="button" (click)="withSignal.set(!withSignal())">Toggle With Signal</button>
+<div>
+  <output>{{ i }}</output>
+</div>
+<br />
+@if (withSignal()) {
+  <div>
+    <output>{{ j() }} </output>
+  </div>
+}
