@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Lab06 } from './lab-06';
+import { DynamicSection } from './dynamic-section';
 
-describe('Lab06', () => {
-  let component: Lab06;
-  let fixture: ComponentFixture<Lab06>;
+describe('DynamicSection', () => {
+  let component: DynamicSection;
+  let fixture: ComponentFixture<DynamicSection>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Lab06]
+      imports: [DynamicSection]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Lab06);
+    fixture = TestBed.createComponent(DynamicSection);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
